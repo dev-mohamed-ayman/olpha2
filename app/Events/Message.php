@@ -39,6 +39,7 @@ class Message implements ShouldBroadcast
     {
         return [
             new Channel('chat.' . $this->receiver->username . '.' . $this->sender->username),
+            new Channel('chat.user.' . $this->receiver->username),
         ];
     }
 

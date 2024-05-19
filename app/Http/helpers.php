@@ -11,7 +11,6 @@ function sendNotification($sender, $receiver, $message, $title)
     $notification->title = $title;
     $notification->save();
 
-    $sender = \App\Models\User::find($sender);
 
     event(new \App\Events\NotificationEvent($sender, $notification));
 }

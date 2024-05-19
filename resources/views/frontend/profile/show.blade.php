@@ -328,7 +328,7 @@
                                                     <div class="bg-secondary-subtle rounded-end-0 rounded-4 p-2" style="border-top-left-radius: 1rem !important;">
                                                         <h6 class="fw-bold text-black">{{$user->name}}</h6>
                                                         <p class="text-black m-0">
-                                                            <small class="">${data.message}</small>
+                                                            <small class="">${data.message.message}</small>
                                                         </p>
                                                     </div>
                                                 </div>

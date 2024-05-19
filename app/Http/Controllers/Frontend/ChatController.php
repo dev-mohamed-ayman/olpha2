@@ -58,7 +58,7 @@ class ChatController extends Controller
         event(new \App\Events\Message(
             $user,
             $receiver,
-            $message->message,
+            $message,
             $user->image
         ));
 
@@ -104,7 +104,7 @@ class ChatController extends Controller
         event(new \App\Events\Message(
             $user,
             $receiver,
-            $message->message,
+            $message,
             $user->image
         ));
 

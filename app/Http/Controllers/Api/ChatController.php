@@ -125,7 +125,7 @@ class ChatController extends Controller
         event(new \App\Events\Message(
             $user,
             $receiver,
-            $message->message,
+            $message,
             $user->image
         ));
 
@@ -133,14 +133,14 @@ class ChatController extends Controller
             event(new \App\Events\Call(
                 $user,
                 $receiver,
-                $message->message,
+                $message,
                 $user->image
             ));
         }
 
         return response()->json([
             'receiver' => $receiver,
-            'user' => $user,
+            'sender' => $user,
             'message' => $message,
             'image' => asset($user->image)
         ]);
@@ -181,7 +181,7 @@ class ChatController extends Controller
         event(new \App\Events\Message(
             $user,
             $receiver,
-            $message->message,
+            $message,
             $user->image
         ));
 
